@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Besar 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+</head>
+<body>
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand text-bg-dark" href="#"><strong>Pemrograman WEB 1</strong></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+          <!-- Navbar End -->
+          <!-- Cover Start -->
+         <main>
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <p class="lead text-muted">TUGAS BESAR 2</p>
+                <h1 class="fw-light">Syauqii Fayyadh Hilal Z</h1>
+                <p class="lead text-muted">Teknik Informatika - 41519120073</p>
+                <p>
+                  
+                <!-- Button trigger modal form data diri-->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaldatadiri">
+                    Form Data Diri
+                  </button>
+                  <button type="button" class="btn btn-secondary my-2" data-bs-toggle="modal" data-bs-target="#modalhitung">
+                    Form Perhitungan Pembelian
+                  </button>
+                </p>
+              </div>
+            </div>
+          </section>
+         </main>
+         <!-- Cover End -->
+         <!-- Modal Form Data Diri -->
+          <!-- Modal -->
+          <div class="modal fade" id="modaldatadiri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Form Data Diri</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                  <form action="#" method="POST" onSubmit="validasi()">
+                    <!-- Nama Lengkap -->
+                    <div class="row mb-3">
+                          <label class="form-label">Nama Lengkap :</label>
+                          <input  type="text" class="form-control" name="nama" id="nama" />
+                    </div>
+
+                    <!-- Alamat -->
+                    <div class="row mb-3">
+                      <label class="form-label">Alamat :</label>
+                      <textarea cols="40" class="form-control" rows="5" name="alamat" id="alamat"></textarea>
+                    </div>
+
+                    <!-- Tempat, Tanggal Lahir -->
+                    <div class="row mb-3">
+                      <label class="form-label">Tempat, Tanggal Lahir :</label>
+                      <input type="text" class="form-control mb-3" name="tlahir" id="tlahir" />
+                      <input type="date" class="form-control" name="tgllahir" id="tgllahir" />
+                    </div>
+
+                    <div class="row mb-3">
+                      <label class="form-label">Jenis Kelamin :</label>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Laki - Laki
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Perempuan
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Hobby -->
+                  <div class="row">
+                    <label class="form-label">Hobby :</label>
+                    <input  type="text" class="form-control" name="hobby" id="hobby" />
+                  </div>    
+                </div>
+              </div>
+                  <!-- Button -->
+               <div class="modal-footer">
+                <input type="reset" class="btn btn-secondary tombol"  value="Reset" >
+                <input type="submit" class="btn btn-primary tombol" value="Daftar" >
+              </div>
+            </form>
+              </div>
+            </div>
+          </div>
+          <!-- Modal End -->
+         
+         
+          <!-- Modal Penghitungan Harga Start -->
+          <div class="modal fade" id="modalhitung" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Form Perhitungan Pembelian</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <h4>Promo Special</h4>
+                      <p>
+                        1. Beli Rp. 100.000 Diskon 5%. <br>
+                        2. Beli Rp. 200.000 Diskon 7%. <br>
+                        3. Beli Rp. 300.000 Diskon 10%.
+                      </p>
+                    <table  class="table">
+                      <tr>
+                        <th>No </th>
+                        <th>Judul buku</th>
+                        <th>harga</th>
+                        <th>jumlah</th>
+                      </tr>
+                      
+                      <tr>
+                        <th>1</th>
+                        <th>algoritma dan pemprograman</th>
+                        <th>Rp.<input type="text" name="harga" id="algoritma" size="7" value="75000" readonly></th>
+                        <th><input type="number" name="jumlah_algoritma" id="harga_algoritma" size="7" value="0" onchange="total()"></th>
+                      </tr>
+                
+                      <tr>
+                        <th>2</th>
+                        <th>algoritma dan pemprograman</th>
+                        <th>Rp.<input type="text" name="harga" id="javascript" size="7" value="46000" readonly></th>
+                        <th><input type="number" name="jumlah_javascript" id="harga_javascript" size="7" value="0" onchange="total()"></th>
+                      </tr>
+                
+                      <tr>
+                        <th>3</th>
+                        <th>PHP</th>
+                        <th>Rp.<input type="text" name="harga" id="php" size="7" value="90000" readonly></th>
+                        <th><input type="number" name="jumlah_php" id="harga_php" size="7" value="0" onchange="total()"></th>
+                      </tr>
+                      
+                      <tr>
+                        <th colspan="3" style="text-align:right">Diskon</th>
+                        <th><input type="text" name="diskon" id="disc" size="7" value="" readonly></th>
+                      </tr>
+                
+                      <tr>
+                        
+                        <th colspan="3" style="text-align:right">Jumlah Total</th>
+                        <th>Rp.<input type="text" name="total_jumlah" id="total" size="7" value="" readonly></th>
+                      </tr>
+                
+                      <tr>
+                        
+                        <th colspan="3" style="text-align:right">Nominal Diskon</th>
+                        <th>Rp.<input type="text" name="nominal_diskon" id="nominal_diskon" size="7" value="" readonly></th>
+                      </tr>
+                
+                
+                      <tr>
+                        <th colspan="3" style="text-align:right">Harga Akhir</th>
+                        <th>Rp.<input type="text" name="Hakhir" id="Hakhir" size="7" value="" readonly></th>
+                      </tr>
+                
+                    </table>
+                  </div>
+                  <br><br>
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <input type="button" class="btn btn-secondary" onclick="window.print()" value="cetak">
+                  <input type="button" class="btn btn-primary" value="Proses" onclick="alert('pembayaran anda diproses')">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal End -->
+          <script >
+            // form pengiriman
+          function validasi() {
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var tlahir = document.getElementById("tlahir").value;
+                var tgllahir = document.getElementById("tgllahir").value;
+                
+            
+                if (nama != "" && alamat !="") {
+                        alert('Terima kasih Anda telah mengisi data Anda harus mengisi data dengan lengkap !');
+                }else{
+                        alert('Maaf, data Anda belum lengkap');
+                }
+          }
+          
+          // form pembelian barang
+          function total() {
+            var valgoritma = 75000 * parseInt(document.getElementById('harga_algoritma').value);
+            var vjavascript = 45000 * parseInt(document.getElementById('harga_javascript').value);
+            var vphp = 90000 * parseInt(document.getElementById('harga_php').value);
+          
+            var jumlah_harga = valgoritma + vjavascript + vphp;
+            document.getElementById('total').value = jumlah_harga;
+          
+            var diskon;
+            var nominal_diskon;
+            var Hakhir;
+            
+            if (jumlah_harga >= 300000){
+              diskon = "10%";
+              nominal_diskon = jumlah_harga * 10/100; 
+              Hakhir = jumlah_harga - nominal_diskon;
+            }
+            else if(jumlah_harga >= 200000){
+              diskon = "7%";
+              nominal_diskon = jumlah_harga * 7/100; 
+              Hakhir = jumlah_harga - nominal_diskon;
+            }
+            else if(jumlah_harga >= 100000){
+              diskon = "5%";
+              nominal_diskon = jumlah_harga * 5/100; 
+              Hakhir = jumlah_harga - nominal_diskon;
+            }
+            else {
+              diskon = 0;
+              nominal_diskon = 0;
+              Hakhir = jumlah_harga;
+            }
+          
+          
+            
+            document.getElementById('disc').value = diskon;
+            document.getElementById('Hakhir').value = Hakhir;
+            document.getElementById('nominal_diskon').value = nominal_diskon;
+            
+          }
+
+          
+          
+            
+          
+          </script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</html>
